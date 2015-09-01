@@ -1,2 +1,5 @@
 #Shaders for Arnold render
-![LOGO!](https://raw.githubusercontent.com/Rasarts/shaders/master/Candy_foil/render.jpg)
+
+##Candy foil:
+
+![Candy foil](https://raw.githubusercontent.com/Rasarts/shaders/master/Candy_foil/preview.jpg)
