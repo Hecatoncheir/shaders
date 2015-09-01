@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: foil_render.ma
-//Last modified: Tue, Sep 01, 2015 01:46:03 PM
+//Last modified: Tue, Sep 01, 2015 02:06:09 PM
 //Codeset: UTF-8
 requires maya "2016";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImage"
@@ -14,16 +14,15 @@ fileInfo "osv" "Mac OS X 10.9.5";
 createNode transform -s -n "persp";
 	rename -uid "72BAFB90-8048-91DE-6B6B-49907C960249";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.410015072630181 1.3181831664350703 1.6201706503323985 ;
-	setAttr ".r" -type "double3" -7.5383527296024972 41.400000000005498 -1.2826337726448706e-13 ;
+	setAttr ".t" -type "double3" 1.141508808845797 1.6543663575734173 0.77250408732566778 ;
+	setAttr ".r" -type "double3" -12.338352729602798 50.600000000005011 1.2527185219982948e-15 ;
 	setAttr ".rpt" -type "double3" -3.4807252136220159e-17 -3.4696240642267315e-17 4.5453273507288577e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "5007E629-F544-E1CC-9A27-0AAFF0F85128";
 	setAttr -k off ".v" no;
-	setAttr ".cap" -type "double2" 1.7322834645669292 0.94488 ;
 	setAttr ".ovr" 1.3;
-	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 2.5032752378720833;
+	setAttr ".fl" 30;
+	setAttr ".coi" 1.8068430674367175;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -155,7 +154,7 @@ createNode areaLight -n "candy_foil:scene:fill_light" -p "candy_foil:scene:areaL
 	setAttr ".ai_exposure" 5.9626169204711914;
 createNode transform -n "candy_foil:pSphere1";
 	rename -uid "508A25FC-2949-A161-5F8A-1B80988F4FF3";
-	setAttr ".t" -type "double3" 0 1.0331673558630019 0 ;
+	setAttr ".t" -type "double3" -1 1.0331673558630019 -1 ;
 createNode mesh -n "candy_foil:pSphereShape1" -p "candy_foil:pSphere1";
 	rename -uid "6D038C62-D54F-615B-5AF5-7E91FC759715";
 	setAttr -k off ".v";
@@ -173,15 +172,15 @@ createNode mesh -n "candy_foil:pSphereShape1" -p "candy_foil:pSphere1";
 	setAttr ".ai_subdiv_iterations" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "D3A4E356-CB4E-1107-3164-31B30E6D911A";
+	rename -uid "92001E9F-7946-38FF-F030-EC84702ECABC";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "8AB93A00-2548-35ED-6395-CE873814AA96";
+	rename -uid "39833B7D-9547-649F-8E3E-C789F0AACFD1";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "385B83F7-2A43-1D20-D662-83927D9A2F2D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1260A2E9-594B-F39B-C294-6E95DF5C8FB0";
+	rename -uid "F4689AC0-BD4C-ACA6-76F3-399C25776811";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C0B61E03-874C-4C36-6304-C6BB956A2F06";
 	setAttr ".g" yes;
@@ -332,9 +331,10 @@ createNode materialInfo -n "materialInfo1";
 	rename -uid "95D4D7F5-CC47-AB31-1377-CD91A8FBBAAD";
 createNode aiStandard -n "foil";
 	rename -uid "05BBD3AB-5944-6554-B9FE-15996511CE32";
-	setAttr ".Kd_color" -type "float3" 0.8143 0.54939997 0 ;
-	setAttr ".Ks" 0.73333334922790527;
-	setAttr ".specular_roughness" 0.30476191639900208;
+	setAttr ".Kd_color" -type "float3" 0.5043 0.30430001 0.098800004 ;
+	setAttr ".Ks" 1;
+	setAttr ".Ks_color" -type "float3" 0.7101 0.495 0 ;
+	setAttr ".specular_roughness" 0;
 createNode aiImage -n "aiImage1";
 	rename -uid "DAE45573-BA40-F27C-CD5B-E587C6CFE3FF";
 	setAttr ".filename" -type "string" "/Users/Ras/Desktop/candy_foil/textures/Foil_texture.jpg";
