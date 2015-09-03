@@ -1,6 +1,6 @@
 //Maya ASCII 2016 scene
 //Name: foil_render.ma
-//Last modified: Tue, Sep 01, 2015 02:06:09 PM
+//Last modified: Thu, Sep 03, 2015 04:40:08 PM
 //Codeset: UTF-8
 requires maya "2016";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImage"
@@ -172,15 +172,15 @@ createNode mesh -n "candy_foil:pSphereShape1" -p "candy_foil:pSphere1";
 	setAttr ".ai_subdiv_iterations" 2;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "92001E9F-7946-38FF-F030-EC84702ECABC";
+	rename -uid "4E9E0BF4-B84D-B7A8-5A41-878585C24816";
 	setAttr -s 6 ".lnk";
 	setAttr -s 6 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "39833B7D-9547-649F-8E3E-C789F0AACFD1";
+	rename -uid "16225395-A941-7D68-1A82-4F82032D43BB";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "385B83F7-2A43-1D20-D662-83927D9A2F2D";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "F4689AC0-BD4C-ACA6-76F3-399C25776811";
+	rename -uid "7D34AFBD-4D41-1B4D-C223-8186BFEC2E44";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C0B61E03-874C-4C36-6304-C6BB956A2F06";
 	setAttr ".g" yes;
@@ -331,13 +331,13 @@ createNode materialInfo -n "materialInfo1";
 	rename -uid "95D4D7F5-CC47-AB31-1377-CD91A8FBBAAD";
 createNode aiStandard -n "foil";
 	rename -uid "05BBD3AB-5944-6554-B9FE-15996511CE32";
-	setAttr ".Kd_color" -type "float3" 0.5043 0.30430001 0.098800004 ;
+	setAttr ".Kd_color" -type "float3" 0.50400001 0.34291938 0.17740799 ;
 	setAttr ".Ks" 1;
-	setAttr ".Ks_color" -type "float3" 0.7101 0.495 0 ;
+	setAttr ".Ks_color" -type "float3" 0.70999998 0.55278319 0.19098999 ;
 	setAttr ".specular_roughness" 0;
 createNode aiImage -n "aiImage1";
 	rename -uid "DAE45573-BA40-F27C-CD5B-E587C6CFE3FF";
-	setAttr ".filename" -type "string" "/Users/Ras/Desktop/candy_foil/textures/Foil_texture.jpg";
+	setAttr ".filename" -type "string" "/Users/Ras/Desktop/shaders/Candy_foil/textures/Foil_texture.jpg";
 	setAttr ".sscale" 7;
 	setAttr ".tscale" 7;
 	setAttr ".multiply" -type "float3" 0.76190478 0.76190478 0.76190478 ;
@@ -346,7 +346,6 @@ createNode bump2d -n "bump2d1";
 	setAttr ".bd" 0.029999999329447746;
 	setAttr -av ".bv" 0;
 	setAttr ".p3d" yes;
-	setAttr ".vc1" -type "float3" 0 0.00033999994 0 ;
 	setAttr ".vc2" -type "float3" 9.9999997e-06 9.9999997e-06 0 ;
 createNode aiImage -n "aiImage2";
 	rename -uid "3F8B62DB-C649-3005-F864-57B5E4A6A873";
@@ -403,14 +402,14 @@ createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
 createNode file -n "file1";
 	rename -uid "51B68A18-8544-5F83-7D02-629F96558E9E";
 	setAttr ".ail" yes;
-	setAttr ".ftn" -type "string" "/Users/Ras/Desktop/Candy_foil/textures/Foil_crumpled.jpg";
+	setAttr ".ftn" -type "string" "/Users/Ras/Desktop/shaders/Candy_foil/textures/Foil_crumpled.jpg";
 	setAttr ".io" 6;
 	setAttr ".ft" 2;
 	setAttr ".uvt" 2;
 	setAttr ".cs" -type "string" "sRGB";
 createNode place2dTexture -n "place2dTexture1";
 	rename -uid "B84B7119-2444-EF19-9F01-458108BEFE73";
-	setAttr ".re" -type "float2" 3 3 ;
+	setAttr ".re" -type "float2" 2 2 ;
 createNode displacementShader -n "displacementShader2";
 	rename -uid "EF79D3C8-F24A-C253-CBA7-5AAB2095F080";
 	setAttr ".vd" -type "float3" 3 3 3 ;
