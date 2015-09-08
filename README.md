@@ -16,5 +16,6 @@
 ![Leather](https://raw.githubusercontent.com/Rasarts/shaders/master/Leather/preview.jpg)
 
 **Snow**
-![Snow](https://raw.githubusercontent.com/Rasarts/shaders/master/Snow/preview.jpg))
+
+![Snow](https://raw.githubusercontent.com/Rasarts/shaders/master/Snow/preview.jpg)
 
